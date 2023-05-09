@@ -3,7 +3,8 @@
 登入頁面
 {% endblock %}
 {% block content %}
-<h1>login</h1>
+<h1>Login</h1>
+<hr>
 <form action="" method="POST">
     {% csrf_token %}<br>
     <label for="username">username</label>
@@ -14,7 +15,6 @@
         <input type="submit" value="登入" name="login">
         <input type="submit" value="註冊" name="register">
         <input type="reset" value="重置">
-
     </p>
 </form>
 {% endblock %}

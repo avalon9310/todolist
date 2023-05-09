@@ -13,7 +13,7 @@ def user_profile(request):
     return render(request,'user/profile.html')
 
 def user_login(request):
-    message=None
+    message=''
     if request.method=='POST':
         if request.POST.get('register'):
             return redirect('register')
