@@ -3,6 +3,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
 
+
+def user_profile(request):
+    return render(request,'user/profile.html')
+
 def user_login(request):
     message=None
     if request.method=='POST':
@@ -27,6 +31,8 @@ def user_login(request):
                 else:
                     login(request,user)
                     message='登入成功!'
+
+                    return redirect('profile')
 
 
 
