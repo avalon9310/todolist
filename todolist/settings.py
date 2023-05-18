@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k+!f1h73awqs%oy$ge1br%464f$6wqk5o#^ss88keqilsam61q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,6 +82,16 @@ DATABASES = {
     }
 }
 
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'todolist',
+    'USER': 'avalon',
+    'PASSWORD': '12345678',
+    'HOST': 'database-2.c0y3lgknejqp.ap-northeast-1.rds.amazonaws.com',#127.0.0.1
+    'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
