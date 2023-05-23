@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k+!f1h73awqs%oy$ge1br%464f$6wqk5o#^ss88keqilsam61q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
-    'todo.apps.TodoConfig'
+    'todo.apps.TodoConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -90,8 +91,8 @@ DATABASES = {
     'NAME': 'todolist',
     'USER': 'avalon',
     'PASSWORD': '12345678',
-    #'HOST': 'localhost',#127.0.0.1
-    'HOST': 'database-2.c0y3lgknejqp.ap-northeast-1.rds.amazonaws.com',#127.0.0.1
+    'HOST': 'localhost',#127.0.0.1
+    #'HOST': 'database-2.c0y3lgknejqp.ap-northeast-1.rds.amazonaws.com',#127.0.0.1
     'PORT': '3306',
     }
 }
@@ -124,7 +125,7 @@ TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
